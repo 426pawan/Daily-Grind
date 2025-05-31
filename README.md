@@ -2,7 +2,7 @@
 
 Daily-Grind is a simple, fun, and efficient To-Do List web application built with **Flask** and **SQLite** that helps you organize and track your everyday tasks effortlessly. Whether for studies, chores, or personal errands, Daily-Grind keeps your daily grind on point!
 
-🔗 **Live Demo**: _[Add your live project URL here]_
+🔗 **Live Demo**: _[https://daily-grind.onrender.com]_
 
 ---
 
