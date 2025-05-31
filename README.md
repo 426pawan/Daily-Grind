@@ -116,6 +116,9 @@ typing_extensions==4.13.2
 
 Werkzeug==3.1.3
 
+gunicorn==23.0.0
+
+
 📄 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
