@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Update Todo{% endblock title %}
+{% block body %}
+<div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        <h2>Update Todo</h2>
+        <form action="/update/{{ todo.sno }}" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="title" class="form-label">Todo Title</label>
+                <input type="text" class="form-control" name="title" id="title" value="{{ todo.title }}" required />
+                <div class="invalid-feedback">Please enter a title.</div>
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Todo Description</label>
+                <textarea class="form-control" name="desc" id="desc" rows="3" required>{{ todo.desc }}</textarea>
+                <div class="invalid-feedback">Please enter a description.</div>
+            </div>
+            <button type="submit" class="btn btn-dark">Update Todo</button>
+            <a href="{{ url_for('hello_world') }}" class="btn btn-secondary ms-2">Cancel</a>
+        </form>
+    </div>
+</div>
+
+<script>
+// Bootstrap form validation script
+(() => {
+  'use strict'
+  const forms = document.querySelectorAll('.needs-validation')
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})();
+</script>
+
+{% endblock body %}
